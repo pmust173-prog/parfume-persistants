@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parfume Persistants | Exquisite Fragrances</title>
+    <meta name="description"
+        content="Discover a world of refined scents and timeless elegance with Parfume Persistants.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <h1 class="loader-logo">Parfume Persistants</h1>
+        </div>
+    </div>
+
+    <!-- Top Notification Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <p>Livraison 58 wilayas - Paiement à la livraison</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">
+                <a href="index.html">Parfume Persistants</a>
+            </div>
+            <div class="header-icons">
+                <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+                <a href="login.html" class="user-icon" title="Admin Login"><i class="fas fa-user"></i></a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-logo">Menu</h2>
+            <button class="close-sidebar" id="close-sidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3>Collections</h3>
+                <ul class="sidebar-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="men.html">Men Parfume</a></li>
+                    <li><a href="women.html">Women Parfume</a></li>
+                    <li><a href="unisex.html">Unisex</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <p>Developed by:</p>
+                <a href="https://www.instagram.com/musta.deo_11/" target="_blank" class="dev-link">
+                    <i class="fab fa-instagram"></i> musta.deo_11
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in-up">L'Art du Parfum de Niche</h1>
+            <p class="fade-in-up delay-1">Discover the finest selection of rare fragrances and decants.</p>
+            <a href="#nouveautes" class="btn btn-primary fade-in-up delay-2">Découvrir</a>
+        </div>
+    </header>
+
+    <!-- Nouveautés Section -->
+    <section id="nouveautes" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nouveautés</h2>
+                <div class="separator"></div>
+                <p>Latest arrivals in our collection.</p>
+            </div>
+
+            <div class="product-grid" id="nouveautes-grid">
+                <!-- Products will be injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section id="promotions" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Promotions</h2>
+                <div class="separator"></div>
+                <p>Exclusive deals on luxury scents.</p>
+            </div>
+
+            <div class="product-grid" id="promotions-grid">
+                <!-- Products will be injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Decants Section -->
+    <section id="decants" class="section bg-light" style="padding-top: 4rem;">
+        <div class="container">
+            <div class="section-header-row">
+                <h2>Decant (تقسيم)</h2>
+                <a href="#" class="btn-see-all">See all <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="decant-grid">
+                <!-- Man Card -->
+                <div class="decant-card">
+                    <div class="decant-bg"
+                        style="background-image: url('images/man-scent-perfume-perfume-cologne-bottle-male-fragrance-perfumery-cosmetics-fashion-cologne-bottle_293990-2036.avif');">
+                    </div>
+                    <div class="decant-overlay">
+                        <h3>Pour Homme</h3>
+                        <p>Des fragrances masculines d'exception.</p>
+                        <a href="men.html" class="btn-discover">Découvrir <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Women Card -->
+                <div class="decant-card">
+                    <div class="decant-bg"
+                        style="background-image: url('images/woman-holding-perfume-bottle-golden-600nw-2636632677.webp');">
+                    </div>
+                    <div class="decant-overlay">
+                        <h3>Pour Femme</h3>
+                        <p>L'élégance féminine en flacon.</p>
+                        <a href="women.html" class="btn-discover">Découvrir <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section bg-light" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Clients</h2>
+                <div class="separator"></div>
+                <p>Trusted by perfume lovers worldwide.</p>
+            </div>
+
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"Absolutely stunning packaging and the scent is 100% authentic. Will
+                        definitely order again!"</p>
+                    <p class="reviewer">- Sarah M.</p>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"The best decant service I've found. Fast delivery and great customer
+                        support."</p>
+                    <p class="reviewer">- Ahmed K.</p>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"Parfume Persistants makes luxury accessible. Love the new Hacivat X!"</p>
+                    <p class="reviewer">- Leila B.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Parfume Persistants</h4>
+                <p>Vente de Parfums de Niche et Décants en Algérie.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/fares.abe_owayse" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@parfums_persistants" target="_blank"><i
+                            class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <ul>
+                    <li><a href="#nouveautes">Nouveautés</a></li>
+                    <li><a href="#promotions">Promotions</a></li>
+                    <li><a href="men.html">Parfums pour Homme</a></li>
+                    <li><a href="women.html">Parfums pour Femme</a></li>
+                    <li><a href="#nouveautes">Décants</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <ul>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Livraison & Retour</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Inscrivez-vous pour les dernières offres.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email...">
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Parfume Persistants. All rights reserved. | <a href="login.html"
+                    style="color: #666; text-decoration: none; font-size: 0.8rem;">Admin Login</a></p>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Mon Panier</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items will be injected here -->
+            <div class="empty-cart-msg">Votre panier est vide.</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">0 DA</span>
+            </div>
+            <button class="btn btn-primary btn-block checkout-btn" id="whatsapp-order-btn">
+                <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Customer Info Modal -->
+    <div class="modal-overlay" id="customer-info-overlay">
+        <div class="modal-content form-premium-card" style="max-width: 550px;">
+            <button class="close-modal" id="close-customer-info"><i class="fas fa-times"></i></button>
+            <h2 class="form-title">Informations de Livraison</h2>
+            <form id="customer-info-form">
+                <div class="form-group">
+                    <label for="customer-name">Nom Complet</label>
+                    <input type="text" id="customer-name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Numéro de Téléphone</label>
+                    <input type="tel" id="customer-phone" placeholder="Ex: 0660484552" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">Adresse de Livraison</label>
+                    <textarea id="customer-address" rows="3" placeholder="Quartier, Rue, Ville, Wilaya"
+                        required></textarea>
+                </div>
+                <button type="submit" class="submit-btn-premium">
+                    <i class="fab fa-whatsapp"></i> Envoyer la Commande
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" alt="" id="modal-img">
+                    <div class="gallery-thumbnails" id="modal-thumbnails">
+                        <!-- Thumbnails will be injected here -->
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title">Product Name</h2>
+                    <p class="brand" id="modal-brand">Brand</p>
+
+                    <div class="size-selector">
+                        <label>Choisir la taille:</label>
+                        <div class="size-options">
+                            <button class="size-btn active" data-size="default">Standard</button>
+                            <button class="size-btn" data-size="10ml">10ml</button>
+                            <button class="size-btn" data-size="20ml">20ml</button>
+                        </div>
+                    </div>
+
+                    <p class="price" id="modal-price">0 DA</p>
+                    <div class="modal-notes" style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #555;"></div>
+                    <p class="modal-desc">This is a premium niche fragrance, carefully curated for its unique scent
+                        profile and lasting power. Experience the luxury of fine perfumery.</p>
+                    <button class="btn btn-primary add-to-cart-btn" id="modal-add-btn">Ajouter au Panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/213660484552" class="whatsapp-float" target="_blank" title="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <div class="search-header">
+                <input type="text" id="search-input" placeholder="Rechercher un parfum, une marque..."
+                    autocomplete="off">
+                <button class="close-search" id="close-search-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="search-results-label">Résultats de recherche</div>
+            <div class="search-results-grid" id="search-results">
+                <!-- Results injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

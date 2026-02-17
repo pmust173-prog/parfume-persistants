@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Parfume Persistants</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            padding-bottom: 50px;
+        }
+
+        .admin-header {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .admin-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .admin-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            flex: 1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: 600;
+        }
+
+        .product-thumb {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .action-btn {
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+
+        .edit-btn {
+            background-color: #ffc107;
+            color: #333;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="admin-header">
+        <div class="container">
+            <h2>Admin Dashboard</h2>
+            <div>
+                <a href="index.html" class="btn btn-secondary" style="padding: 8px 15px; font-size: 0.8rem;">View
+                    Site</a>
+                <button id="logout-btn" class="btn btn-outline"
+                    style="border-color: white; color: white; margin-left: 10px; padding: 8px 15px; font-size: 0.8rem;">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Add/Edit Form -->
+        <section class="admin-section">
+            <h3 id="form-title">Add New Product</h3>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Product Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Brand</label>
+                        <input type="text" id="brand" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Price 10ml (DA)</label>
+                    <input type="number" id="price-10ml" placeholder="Optional">
+                </div>
+                <div class="form-group">
+                    <label>Price 20ml (DA)</label>
+                    <input type="number" id="price-20ml" placeholder="Optional">
+                </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label>Base Price (DA)</label>
+            <input type="number" id="price" required>
+        </div>
+        <div class="form-group">
+            <label>Old Price (Optional)</label>
+            <input type="number" id="old-price">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label>Main Image URL</label>
+            <input type="url" id="image" required placeholder="https://...">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label>Image URL 2 (Optional)</label>
+            <input type="url" id="image2" placeholder="https://...">
+        </div>
+        <div class="form-group">
+            <label>Image URL 3 (Optional)</label>
+            <input type="url" id="image3" placeholder="https://...">
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+            <select id="category">
+                <option value="nouveautes">Nouveautés</option>
+                <option value="promotions">Promotions</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Badge</label>
+        <select id="badge">
+            <option value="">None</option>
+            <option value="New">New</option>
+            <option value="-15%">-15%</option>
+            <option value="-20%">-20%</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Gender</label>
+        <select id="gender">
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="unisex">Unisex</option>
+        </select>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save Product</button>
+    <button type="button" id="cancel-btn" class="btn btn-secondary" style="display:none;">Cancel</button>
+    </form>
+    </section>
+
+    <!-- Product List -->
+    <section class="admin-section">
+        <h3>Product List</h3>
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                    <!-- Products will be injected here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
